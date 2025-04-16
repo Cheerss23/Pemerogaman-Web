@@ -1,0 +1,8 @@
+service:
+
+web:
+  image: nginx:latest
+  post: -"80:80"
+  volumes: 
+    -./coding/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    -./coding/html:/usr/share/nginx/htm
